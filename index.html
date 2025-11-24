@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ứng Dụng Quản Lý Người Dùng</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hệ Thống Quản Lý Thành Viên (CRUD)</h1>
+
+      <section id="them-thanh-vien">
+        <h2>Thêm Thành Viên Mới</h2>
+        <form id="form-them-thanh-vien">
+          <input type="text" id="ho-ten" placeholder="Họ Tên" required />
+          <input type="email" id="thu-dien-tu" placeholder="Email" required />
+          <input type="text" id="so-dien-thoai" placeholder="Số Điện Thoại" required />
+          <button type="submit">Thêm Thành Viên</button>
+        </form>
+      </section>
+
+      <hr />
+
+      <section id="thanh-dieu-khien">
+        <input
+          type="text"
+          id="o-tim-kiem"
+          placeholder="Tìm kiếm theo Họ Tên..."
+        />
+        <button id="nut-tim-kiem">Tìm Kiếm</button>
+      </section>
+
+      <section id="khu-vuc-bang-thanh-vien">
+        <h2>Danh Sách Thành Viên</h2>
+        <p id="thong-bao-loi" class="error"></p>
+        <table id="bang-thanh-vien">
+          <thead>
+            <tr>
+              <th>Họ Tên</th>
+              <th>Email</th>
+              <th>Số Điện Thoại</th>
+              <th>Thao Tác</th>
+            </tr>
+          </thead>
+          <tbody id="danh-sach-thanh-vien"></tbody>
+        </table>
+      </section>
+
+      <div id="dieu-khien-phan-trang"></div>
+
+      <div id="hop-thoai-chinh-sua" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h3>Chỉnh Sửa Thành Viên</h3>
+          <form id="form-chinh-sua-thanh-vien">
+            <input type="hidden" id="ma-chinh-sua" />
+            <input type="text" id="ho-ten-chinh-sua" placeholder="Họ Tên" required />
+            <input type="email" id="thu-dien-tu-chinh-sua" placeholder="Email" required />
+            <input
+              type="text"
+              id="so-dien-thoai-chinh-sua"
+              placeholder="Số Điện Thoại"
+              required
+            />
+            <button type="submit">Lưu Thay Đổi</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
